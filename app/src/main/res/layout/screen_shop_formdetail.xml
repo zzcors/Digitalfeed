@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/image_market"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <TextView
+        android:id="@+id/tshopname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shop name"
+        android:layout_below="@+id/image_market"
+        />
+    <EditText
+        android:id="@+id/eshopname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shop name"
+        android:layout_below="@+id/tshopname"
+        />
+    <TextView
+        android:id="@+id/lshopname"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDarkGray"
+        android:layout_below="@+id/eshopname"
+        />
+    <TextView
+        android:id="@+id/tadmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin"
+        android:layout_below="@+id/lshopname"
+        />
+    <EditText
+        android:id="@+id/eadmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin"
+        android:layout_below="@+id/tadmin"
+        />
+    <TextView
+        android:id="@+id/ladmin"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDarkGray"
+        android:layout_below="@+id/eadmin"
+        />
+    <ImageView
+        android:id="@+id/image_admin"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        />
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ladmin"
+        android:text="Employeee"
+        />
+    <EditText
+        android:id="@+id/eemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Employee"
+        android:layout_below="@+id/temp"
+        />
+    <TextView
+        android:id="@+id/lemp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDarkGray"/>
+
+
+</RelativeLayout>

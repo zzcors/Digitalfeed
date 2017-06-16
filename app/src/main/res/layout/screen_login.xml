@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreen">
+    <ImageView
+        android:id="@+id/dicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/app_icon_180x180"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="90dp"
+
+        />
+    <EditText
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginLeft="13dp"
+        android:background="@drawable/rectangle_curve_top_white"
+        android:layout_below="@+id/dicon"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:hint="Email"
+        />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle_curve_bottom_white"
+        android:layout_below="@+id/user"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:hint="Password"
+        />
+
+    <Button
+        android:onClick="subsubmitButton"
+        android:id="@+id/loginbt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:background="@drawable/rectangle_curve_topbottom_green"
+        android:text="Log in"
+        android:textColor="@color/colorWhite"
+
+
+        />
+
+</RelativeLayout>

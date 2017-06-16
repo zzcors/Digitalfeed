@@ -1,0 +1,79 @@
+<resources>
+    <!--A-->
+    <string name="app_name">Digitalfeed</string>
+
+    <!--B-->
+
+
+    <!--C-->
+
+
+    <!--D-->
+
+
+    <!--E-->
+    <string name="email_error">Please enter your email.</string>
+
+    <!--F-->
+
+
+    <!--G-->
+
+    <!--H-->
+
+
+    <!--I-->
+
+
+    <!--J-->
+
+
+    <!--K-->
+
+
+    <!--L-->
+
+
+
+    <!--M-->
+
+
+    <!--N-->
+
+
+    <!--O-->
+
+
+    <!--P-->
+    <string name="password_error">Please enter your password</string>
+
+    <!--Q-->
+
+
+    <!--R-->
+
+
+    <!--S-->
+
+    <!--T-->
+
+    <!--U-->
+
+
+    <!--V-->
+
+
+    <!--W-->
+
+
+    <!--X-->
+
+
+    <!--Y-->
+
+
+    <!--Z-->
+
+
+
+</resources>
