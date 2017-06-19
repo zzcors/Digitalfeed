@@ -4,18 +4,24 @@ package fg.mdp.cpf.digitalfeed.screen;
  * Created by mdc_macbook on 6/15/2017 AD.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.github.orangegangsters.lollipin.lib.managers.AppLock;
 import com.mdp.core.screen.ScreenFragment;
+import com.mdp.core.system.systemInfo;
 import com.mdp.core.util.PopupUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import fg.mdp.cpf.digitalfeed.R;
+import fg.mdp.cpf.digitalfeed.activity.CustomPinActivity;
+import fg.mdp.cpf.digitalfeed.activity.MainActivity;
+import fg.mdp.cpf.digitalfeed.connections.Connections;
 
 import android.util.Log;
 
@@ -33,6 +39,8 @@ public class LoginScreen extends ScreenFragment implements View.OnClickListener 
     EditText _user ;
     static final String TAG = LoginScreen.class.getName();
 
+    int REQUEST_CODE_ENABLE = 11 ;
+
     @Override
     public View onCreateScreen(Bundle savedInstanceState) {
         rootview = InflateView(R.layout.screen_login);
@@ -40,6 +48,16 @@ public class LoginScreen extends ScreenFragment implements View.OnClickListener 
             ButterKnife.bind(this, rootview);
             setValue();
         }
+
+        _loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(systemInfo.getMainActivity(), CustomPinActivity.class);
+                myIntent.putExtra(AppLock.EXTRA_TYPE, AppLock.ENABLE_PINLOCK);
+                startActivityForResult(myIntent, REQUEST_CODE_ENABLE);
+                systemInfo.getMainActivity().startActivity(myIntent);
+            }
+        });
 
         return rootview;
     }
@@ -65,7 +83,6 @@ public class LoginScreen extends ScreenFragment implements View.OnClickListener 
 
     public boolean validate(EditText _emailText,EditText _passwordText) {
         boolean valid = true;
-
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
         Log.d("email", email);
@@ -75,7 +92,7 @@ public class LoginScreen extends ScreenFragment implements View.OnClickListener 
             valid=false;
         }
         else _emailText.setError(null);
-        if (email.isEmpty()){
+        if (password.isEmpty()){
             PopupUtil.AlertMessage(getContext(),getContext().getResources().getString(R.string.password_error));
             valid = false;
         }
@@ -92,7 +109,11 @@ public class LoginScreen extends ScreenFragment implements View.OnClickListener 
                 final EditText textpw = _passwordText;
                 boolean valid = validate(textemail, textpw);
                 if (valid == true){
-                    ReplaceScreen(new PINScreen());
+                    if(true){
+                        ReplaceScreen(new PINScreen());
+                    }
+                    else onLoginFailed();
+
                 }
 
                 else {
@@ -101,6 +122,12 @@ public class LoginScreen extends ScreenFragment implements View.OnClickListener 
 
                 break;
         }
+    }
+    public boolean check(String _email,String _pw){
+        Connections conn = new Connections();
+        
+
+        return true;
     }
 
     public void setValue() {
