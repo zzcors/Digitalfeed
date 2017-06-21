@@ -12,7 +12,7 @@
 
 
     <!--E-->
-    <string name="email_error">Please enter your email.</string>
+
 
     <!--F-->
 
@@ -32,8 +32,7 @@
 
 
     <!--L-->
-
-
+    <string name="login_error">Your email or password is wrong.</string>
 
     <!--M-->
 
@@ -45,7 +44,7 @@
 
 
     <!--P-->
-    <string name="password_error">Please enter your password</string>
+
 
     <!--Q-->
 

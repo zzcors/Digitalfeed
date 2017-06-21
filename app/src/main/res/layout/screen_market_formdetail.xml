@@ -3,36 +3,36 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
-        android:id="@+id/image_market"
-        android:layout_width="match_parent"
-        android:layout_height="200dp" />
+    android:id="@+id/image_market"
+    android:layout_width="match_parent"
+    android:layout_height="200dp" />
     <TextView
-        android:id="@+id/tshopname"
+        android:id="@+id/tmarketname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Shop name"
+        android:text="market name"
         android:layout_below="@+id/image_market"
         />
     <EditText
-        android:id="@+id/eshopname"
+        android:id="@+id/emarketname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Shop name"
+        android:text="market name"
         android:layout_below="@+id/tshopname"
         />
     <TextView
-        android:id="@+id/lshopname"
+        android:id="@+id/lmarketname"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/colorDarkGray"
-        android:layout_below="@+id/eshopname"
+        android:layout_below="@+id/emarketname"
         />
     <TextView
         android:id="@+id/tadmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Admin"
-        android:layout_below="@+id/lshopname"
+        android:layout_below="@+id/lmarketname"
         />
     <EditText
         android:id="@+id/eadmin"
@@ -72,7 +72,4 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/colorDarkGray"/>
-
-
-
 </RelativeLayout>
